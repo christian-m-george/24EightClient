@@ -25,10 +25,10 @@ export default function App() {
 // }
 
 const getHelloWorld = () => {
-  return fetch('192.168.0.137:8000')
+  return fetch('https://twentyfoureight-server.herokuapp.com/')
   .then((response) => response.json())
   .then((json) => {
-    return json
+    console.log(json) 
   })
   .catch((error) => {
     console.error(error);
