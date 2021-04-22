@@ -26,9 +26,9 @@ export default function App() {
 
 const getHelloWorld = () => {
   return fetch('https://twentyfoureight-server.herokuapp.com/')
-  .then((response) => response.json())
-  .then((json) => {
-    console.log(json) 
+  .then((response) => {return response.text()})
+  .then((responseJson) => {
+    console.log(responseJson) 
   })
   .catch((error) => {
     console.error(error);
